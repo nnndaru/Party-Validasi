@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/style.css" rel="stylesheet" />
+    <title>Party Validasi</title>
+  </head>
+  <body>
+    <div class="bg-black text-white text-xs text-center p-2 overflow-hidden">
+      Party Validasi
+    </div>
+
+    <div
+      id="auto-slider"
+      style="width: 100vw; height: 100px; overflow: hidden; position: relative"
+    >
+      <div
+        id="slider-track"
+        style="display: flex; width: max-content; transition: transform 0.5s"
+      >
+        <img
+          src="./assets/a.png"
+          alt="a"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/b.png"
+          alt="b"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/c.png"
+          alt="c"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/d.png"
+          alt="d"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/e.png"
+          alt="e"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/f.png"
+          alt="f"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/g.png"
+          alt="g"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/a.png"
+          alt="a"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/b.png"
+          alt="b"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/c.png"
+          alt="c"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/d.png"
+          alt="d"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/e.png"
+          alt="e"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/f.png"
+          alt="f"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/g.png"
+          alt="g"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/a.png"
+          alt="a"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/b.png"
+          alt="b"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/c.png"
+          alt="c"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/d.png"
+          alt="d"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/e.png"
+          alt="e"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/f.png"
+          alt="f"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/g.png"
+          alt="g"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <!-- Duplicate for seamless loop -->
+        <img
+          src="./assets/a.png"
+          alt="a"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/b.png"
+          alt="b"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/c.png"
+          alt="c"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/d.png"
+          alt="d"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/e.png"
+          alt="e"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/f.png"
+          alt="f"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+        <img
+          src="./assets/g.png"
+          alt="g"
+          class="slider-img"
+          style="height: 100px; width: auto"
+        />
+      </div>
+    </div>
+    <script>
+      const track = document.getElementById('slider-track');
+      const imgs = track.querySelectorAll('.slider-img');
+      const imgCount = imgs.length / 2; // since we duplicated
+      let position = 0;
+      let imgWidth = imgs[0].clientWidth;
+
+      function slide() {
+        position += 2; // px per frame, adjust for speed
+        if (position >= imgWidth * imgCount) {
+          position = 0;
+        }
+        track.style.transform = `translateX(-${position}px)`;
+        requestAnimationFrame(slide);
+      }
+
+      // Wait for images to load to get correct width
+      window.addEventListener('load', () => {
+        imgWidth = imgs[0].clientWidth;
+        slide();
+      });
+    </script>
+    <div id="carousel" class="relative w-full mx-auto">
+      <div class="carousel-images">
+        <img
+          src="./assets/PARTY VALIDASI 0.jpg"
+          alt="0"
+          class="w-full block"
+          style="display: block; width: 100vw; max-width: 100vw"
+        />
+        <img
+          src="./assets/PARTY VALIDASI 1.jpg"
+          alt="1"
+          class="w-full"
+          style="display: none; width: 100vw; max-width: 100vw"
+        />
+        <img
+          src="./assets/PARTY VALIDASI 2.jpg"
+          alt="2"
+          class="w-full"
+          style="display: none; width: 100vw; max-width: 100vw"
+        />
+        <img
+          src="./assets/PARTY VALIDASI 3.jpg"
+          alt="3"
+          class="w-full"
+          style="display: none; width: 100vw; max-width: 100vw"
+        />
+      </div>
+      <button
+        id="prev"
+        class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded-full"
+      >
+        &lt;
+      </button>
+      <button
+        id="next"
+        class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded-full"
+      >
+        &gt;
+      </button>
+    </div>
+    <script>
+      const images = document.querySelectorAll(
+        '#carousel .carousel-images img'
+      );
+      let current = 0;
+      function showImage(idx) {
+        images.forEach(
+          (img, i) => (img.style.display = i === idx ? 'block' : 'none')
+        );
+      }
+      document.getElementById('prev').onclick = () => {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+      };
+      document.getElementById('next').onclick = () => {
+        current = (current + 1) % images.length;
+        showImage(current);
+      };
+      setInterval(() => {
+        current = (current + 1) % images.length;
+        showImage(current);
+      }, 1000);
+    </script>
+  </body>
+</html>
